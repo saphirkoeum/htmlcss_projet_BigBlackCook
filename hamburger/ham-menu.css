@@ -1,0 +1,71 @@
+
+/* [ON BIG SCREENS] */
+/* Wrapper */
+#hamnav {
+  width: 100%;
+  background: #000;
+  /* Optional */
+  position: sticky;
+  top: 0;
+}
+
+/* Hide Hamburger */
+#hamnav label, #hamburger { display: none; }
+
+/* Horizontal Menu Items */
+#hamitems { display: flex; }
+#hamitems a {
+  width: 20%; /* 100% / 5 tabs = 20% */
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-family: "futura", sans-serif;
+}
+#header__logo {
+  display: inline-block;
+  width: 10%;
+  margin-right: 20%;
+  font-family: "futura", sans-serif;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 28px;
+  font-weight: 900px;
+  vertical-align: middle;
+}
+#hamitems a:hover {
+  color: rgb(223, 77, 138);
+}
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px){
+  /* Show Hamburger Icon */
+  #hamnav label {
+    display: inline-block;
+    color: white;
+    background: rgb(223, 77, 138);
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  /* Break down menu items into vertical */
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+    font-family: "futura", sans-serif;
+  }
+
+  /* Toggle Show/Hide Menu */
+  #hamitems { display: none; }
+  #hamnav input:checked ~ #hamitems { display: block; }
+}
+
+/* [DOES NOT MATTER] */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: "futura", sans-serif;
+}

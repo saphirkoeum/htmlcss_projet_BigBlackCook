@@ -1,0 +1,470 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+body{
+@include body;
+padding-bottom: 20%;
+
+
+//header//
+
+/* [ON BIG SCREENS] */
+/* Wrapper */
+#hamnav {
+  width: 100%;
+  background: #000;
+  /* Optional */
+  position: sticky;
+  top: 0;
+}
+
+/* Hide Hamburger */
+#hamnav label, #hamburger { display: none; }
+
+/* Horizontal Menu Items */
+#hamitems { display: flex; }
+#hamitems a {
+  width: 20%; /* 100% / 5 tabs = 20% */
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-family: "futura", sans-serif;
+}
+#header__logo {
+  display: inline-block;
+  width: 10%;
+  margin-right: 20%;
+  font-family: "futura", sans-serif;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 28px;
+  font-weight: 900px;
+  vertical-align: middle;
+}
+#hamitems a:hover {
+  color: rgb(223, 77, 138);
+}
+
+
+// header{
+//   background: black;
+//   color: white;
+//   font-size: 0;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//
+//   .header__logo {
+//     display: inline-block;
+//     width: 8%;
+//     margin-right: 20%;
+//     font-family: "futura", sans-serif;
+//     padding: 10px;
+//     box-sizing: border-box;
+//     font-size: 28px;
+//     font-weight: 900px;
+//     vertical-align: middle;
+//   }
+//
+//   .header__menu {
+//     width: 70%;
+//     display: inline-block;
+//     vertical-align: middle;
+//     font-size: 0;
+//   }
+//
+//   .header__menu-element {
+//     display: inline-block;
+//     width: 8%;
+//     font-size: 18px;
+//     text-align: center;
+//     padding-right: 15%;
+//     font-family: "futura", sans-serif;
+//   }
+//   //A MODIFIE//
+//   .header__jecoute{
+//     display: inline-block;
+//     width: 11%;
+//     font-size: 18px;
+//     text-align: center;
+//     padding-right: 15%;
+//     font-family: "futura", sans-serif;
+//   }
+//     a { color: white;
+//     text-decoration: none;
+//     &:hover {color: $pinkcolor;}
+//   }
+// }
+
+//PAGE INDEX//
+.index{
+  @include main;
+  p{
+    font-family : $font;
+    font-size: 5em;
+    color: white;
+  }
+  img{
+    @include img;
+    margin-bottom: 5%;
+
+  }
+}
+
+//BIG BLACK QUI//
+
+.article{
+  @include main2;
+  @include font;
+
+  img{
+    border: white solid 10px;
+    height: 400px;
+  }
+  .texte{
+    width: 40%;
+    background-color: $opacity2;
+    padding: 3%;
+  }
+}
+
+//BIG BLACK OU//
+.ou {
+  @include main2;
+  iframe{
+    height: 50%;
+    width: 30%;
+  }
+  .contact {
+    @include font;
+    padding-top: 5%;
+    text-align: center;
+    width: 30%;
+    height: 30%;
+    background-color: $opacity2;
+  }
+}
+
+//BIG BLACK JECOUTE//
+.fond{
+    @include main2;
+
+  .image1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+      img{
+        border: 5px solid white;
+        height: 20em;
+      }
+    }
+    .container{
+      height: 100%;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 20%;
+    p{
+      @include font_titre;
+    }
+    .input{
+      width: 95%;
+      height: 20%;
+      padding: 0px 15px 0px 15px;
+      background: $opacity3;
+      border: $bordecolorform;
+      border-bottom: none;
+      outline: none;
+      color: black;
+      font-family: $font;
+    }
+    textarea{
+      width: 95%;
+      height: 70%;
+      padding: 15px;
+      background: $opacity3;
+      outline: none;
+      border: $bordecolorform;
+    }
+    .submit{
+      padding: 3%;
+      color: black;
+      font-family: $font;
+      background-color: white;
+      cursor: pointer;
+      border: $bordecolorform;
+      &:hover {background-color: $pinkcolor;}
+    }
+    }
+
+  .image2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+      img{
+        border: 5px solid white;
+        height: 20em;
+      }
+    }
+}
+//BIG BLACK QUOI//
+#grid {
+  background-color: $opacity2;
+  display: grid;
+  height: 60%;
+  width: 75%;
+  grid-template-columns: 35% 30% 35%;
+  grid-template-rows: 100%;
+  grid-template-areas:
+  "colonne1 colonne2 colonne3"
+}
+.quoi{
+  @include main;
+  @include font;
+
+  p{
+    @include font_titre;
+    text-align: center;
+  }
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    color: white;
+    text-decoration: none;
+  }
+
+}
+li{
+  list-style-type: none;
+}
+.row1 {
+  grid-area: row1;
+}
+.titres{
+  background-color: black;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+.colonne1{
+border: 2px solid black;
+padding: O;
+}
+.colonne2{
+  border: 2px solid black;
+}
+.colonne3{
+  border: 2px solid black;
+}
+
+
+//FOOTER//
+footer{
+  margin-top: 10%;
+  height: 8%;
+  width: 100%;
+  bottom: 0;
+  background-color: black;
+  position: sticky;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  p{
+    font-family: "futura",sans-serif;
+    color: white;
+  }
+  img{
+    height: 50px;
+  }
+
+}
+}
+@media screen and (max-width: 767px){
+
+  body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    #hamnav{
+
+      position: absolute;
+    }
+    /* Show Hamburger Icon */
+    #hamnav label {
+      display: inline-block;
+      color: white;
+      background: $pinkcolor;
+      font-style: normal;
+      font-size: 1.2em;
+      padding: 10px;
+    }
+
+    /* Break down menu items into vertical */
+    #hamitems a {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      border-top: 1px solid #333;
+      font-family: "futura", sans-serif;
+    }
+
+    /* Toggle Show/Hide Menu */
+    #hamitems { display: none; }
+    #hamnav input:checked ~ #hamitems { display: block; }
+
+
+
+
+    //BIG BLACK COOK//
+    .index{
+      background-color: inherit;
+      margin: 0;
+
+      p{
+        font-size: 1em;
+      }
+      img{
+        height: 20%;
+      }
+    }
+    //BIG BLACK QUI//
+    .article{
+      background-color: inherit;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 30%;
+      font-size: 0.7em;
+      width: 100%;
+      padding-bottom: 3%;
+      img{
+        height: 30%;
+      }
+      .texte{
+        background-color: $opacity3;
+        margin-top: 5%;
+        width: 80%;
+        padding: 2%;
+      }
+    }
+      //BIG BLACK QUOI//
+      .quoi{
+        font-size: 60%;
+        .titres{
+          font-size: 80%;
+        }
+        a{
+          padding-bottom: 15%;
+        }
+        #grid{
+          display: block;
+          height: 73%;
+
+        }
+      }
+
+      //BIG BLACK OU//
+
+      .ou{
+        background-color: inherit;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        iframe{
+          height: 50%;
+          width: 80%;
+        }
+
+        .contact{
+          background-color: $opacity3;
+          // margin-top: 5%;
+          width: 80%;
+          padding-top: 15%;
+        }
+      }
+      //BIG BLACK JECOUTE//
+      .fond{
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: inherit;
+
+        .image1{
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+          height: 25%;
+
+         img{
+           height: 80%;
+        }
+        }
+        .image2 {
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+          height: 25%;
+          img{
+            height: 80%;
+          }
+        }
+
+
+        .container{
+          width: 70%;
+          padding-bottom: 55%;
+          // justify-content: center;
+          p{
+            font-size: 100%;
+            text-align: center;
+          }
+        }
+      }
+
+      //FOOTER//
+    footer{
+      bottom: 0;
+      height: 5%;
+      width: 100%;
+      background-color: inherit;
+    }
+  }
+}
+//
+//     .qui{
+//       background-color: inherit;
+//       flex-direction: column;
+//       justify-content: center;
+//       margin-top: 30%;
+//       font-size: 0.7em;
+//       img{
+//         height: 20%;
+//       }
+//       article{
+//         width: 100%;
+//         height: 30%;
+//       }
+//     .container {
+//       background-color: inherit;
+//       flex-direction: column;
+//       flex-wrap: wrap;
+//     }
+//     .contact {
+//       width: 100%;
+//     }
+//   }
+//   }
+// footer{
+//   //position: static;
+//   bottom: 0;
+//   width: 100%;
+// }
