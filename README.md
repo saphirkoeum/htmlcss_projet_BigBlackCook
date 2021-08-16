@@ -1,5 +1,5 @@
 # htmlcss_projet_BigBlackCook
-DesCodeuses - March 2021 - 2nd Group Project with Flavie, Ksenia &amp; Sansy
+DesCodeuses - March 2021 - 2nd Group Project with Flavie, Ksenia &amp; Sandy
 
 Create a website with SASS
 
